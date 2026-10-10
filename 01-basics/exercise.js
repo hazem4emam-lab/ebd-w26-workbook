@@ -16,9 +16,24 @@
  * @param {*} value any value at all
  * @returns {string}
  */
+
 export function describeValue(value) {
-  // TODO: use typeof inside a template literal.
-  throw new Error("describeValue is not written yet");
+  return `${value} is a ${typeof value}`;
+}
+
+export function priceLabel(product, amount) {
+  return `${product} costs ${amount} EGP`;
+}
+
+export function isExpensive(amount) {
+  return amount > 100;
+}
+
+export function shippingCost(orderTotal) {
+  if (orderTotal > 500) {
+    return 0;
+  }
+  return 50;
 }
 
 /**
@@ -29,38 +44,6 @@ export function describeValue(value) {
  * @param {number} amount in EGP
  * @returns {string}
  */
-export function priceLabel(product, amount) {
-  // TODO: two values in one template literal.
-  throw new Error("priceLabel is not written yet");
-}
-
-/**
- * Is this price over 100 EGP?
- * isExpensive(320) -> true
- * isExpensive(45) -> false
- * isExpensive(100) -> false, because 100 is not over 100
- *
- * @param {number} amount in EGP
- * @returns {boolean}
- */
-export function isExpensive(amount) {
-  // TODO: return the comparison itself. You do not need an if statement.
-  throw new Error("isExpensive is not written yet");
-}
-
-/**
- * What shipping costs on an order.
- * Orders over 500 EGP ship free. Everything else costs 50 EGP.
- * shippingCost(600) -> 0
- * shippingCost(500) -> 50, because 500 is not over 500
- *
- * @param {number} orderTotal in EGP
- * @returns {number} the shipping cost in EGP
- */
-export function shippingCost(orderTotal) {
-  // TODO: use an if. Remember that return stops the function.
-  throw new Error("shippingCost is not written yet");
-}
 
 /**
  * Describes how much of something is left.
@@ -72,6 +55,11 @@ export function shippingCost(orderTotal) {
  * @returns {string}
  */
 export function stockLabel(count) {
-  // TODO: use if / else if / else. The order of the branches matters.
-  throw new Error("stockLabel is not written yet");
+  if (count === 0) {
+    return "Out of stock";
+  } else if (count < 10) {
+    return "Low stock";
+  } else {
+    return "In stock";
+  }
 }
