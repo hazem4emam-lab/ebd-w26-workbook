@@ -1,4 +1,5 @@
-// 07-npm — your work goes in this file, and in package.json.
+
+ // 07-npm — your work goes in this file, and in package.json.
 //
 // Read 07-npm/README.md first and work through its numbered steps.
 // Nothing here runs until you have done step 1:  npm install dayjs
@@ -19,8 +20,7 @@ import dayjs from "dayjs";
  * @returns {string} the same date as DD/MM/YYYY
  */
 export function formatDate(dateString) {
-  // TODO: dayjs(dateString), then .format() with the right pattern.
-  throw new Error("formatDate is not written yet");
+  return dayjs(dateString).format("DD/MM/YYYY");
 }
 
 /**
@@ -31,8 +31,7 @@ export function formatDate(dateString) {
  * @returns {number}
  */
 export function yearOf(dateString) {
-  // TODO: dayjs has a method for exactly this. It returns a number.
-  throw new Error("yearOf is not written yet");
+  return dayjs(dateString).year();
 }
 
 /**
@@ -49,8 +48,9 @@ export function yearOf(dateString) {
  *
  * The example file does this on one line. Remember `export`.
  */
-
-// TODO: write addDays here.
+export function addDays(dateString, days) {
+  return dayjs(dateString).add(days, "day").format("YYYY-MM-DD");
+}
 
 /**
  * The package YOU chose from the registry.
@@ -63,4 +63,4 @@ export function yearOf(dateString) {
  *
  * @type {string}
  */
-export const myPackage = "REPLACE ME";
+export const myPackage = "lodash";
