@@ -1,3 +1,4 @@
+
 /* 10-css — your work goes in this file.
  *
  * The lesson is example.css:      npm run open 10
@@ -14,29 +15,49 @@
  * Keep the page open in the browser and refresh after each change.
  */
 
-/* TODO: a rule for `body` that sets
- *       font-family, color, and background-color. */
+/* The overall page style. */
+body {
+  font-family: system-ui, sans-serif;
+  color: #1a1a1a;
+  background-color: #fdfdfb;
+}
 
-/* TODO: a rule for `.page` that sets
- *       max-width, and margin (use `0 auto` to centre it). */
+/* Centre the page and limit its width. */
+.page {
+  max-width: 48rem;
+  margin: 0 auto;
+}
 
-/* TODO: a rule for `header` that sets
- *       display: flex;
- *       justify-content: space-between;
- *       align-items: center;
- *       and one more property of your choosing. */
+/* Align the heading and navigation horizontally. */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #0b6e4f;
+}
 
-/* TODO: a rule for `nav a` — a descendant selector, so it only affects links
- *       inside the nav — that sets
- *       color, and text-decoration. */
+/* Style links inside the navigation only. */
+nav a {
+  color: #0b6e4f;
+  text-decoration: none;
+}
 
-/* TODO: a rule for `.card-list` that sets
- *       display: flex;
- *       gap (any size);
- *       flex-wrap: wrap; */
+/* Arrange cards in a flexible row. */
+.card-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-/* TODO: a rule for `.card` that sets
- *       padding, border-radius, and background-color. */
+/* Give each card spacing, rounded corners, and a background. */
+.card {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
 
-/* TODO: a rule for `.price` that sets
- *       color, and font-weight. */
+/* Highlight product prices. */
+.price {
+  color: #0b6e4f;
+  font-weight: bold;
+}
