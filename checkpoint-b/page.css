@@ -1,0 +1,76 @@
+
+/* Checkpoint B — your styling. Build it to checkpoint-b/spec.md. */
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7f5;
+  color: #1b2e26;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-bottom: 4px solid #176b52;
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 0;
+  color: #14523f;
+}
+
+h2 {
+  color: #14523f;
+}
+
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.stock-line {
+  padding: 1rem;
+  color: #173d2e;
+  background-color: #ffffff;
+  border: 1px solid #a9c5b7;
+  border-radius: 8px;
+}
+
+button {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #176b52;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #104c3a;
+}
+
+button:focus-visible {
+  outline: 3px solid #d97706;
+  outline-offset: 3px;
+}
+
+footer {
+  margin-top: 2rem;
+  color: #43584c;
+}
